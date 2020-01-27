@@ -1,0 +1,119 @@
+micronaut:
+  function:
+    name: mfg-test
+mfg:
+ test:
+  value: test
+
+
+---
+# Added by Micronaut HTTP Client
+slack:
+  url: https://hooks.slack.com/services
+  app: someapp
+  key: somekey
+  secret: somesecret
+
+
+---
+# Added by Micronaut AWS SDK API Gateway WebSockets
+aws:
+  websocket:
+    region: eu-west-1
+    connections:
+      url: https://abcefgh.execute-api.eu-west-1.amazonaws.com/test/@connections
+
+
+---
+# Added by Micronaut AWS SDK Kinesis
+aws:
+  kinesis:
+    region: eu-west-1
+    stream: MyStream
+
+
+---
+# Added by Micronaut AWS SDK S3
+aws:
+  s3:
+    region: eu-west-1
+    bucket: MyBucket
+
+
+---
+# Added by Micronaut AWS SDK SNS
+aws:
+  sns:
+    region: eu-west-1
+    topic: MyTopic
+    ios:
+      arn: arn:aws:sns:eu-west-1:123456789:app/APNS/my-ios-app
+    android:
+      arn: arn:aws:sns:eu-west-1:123456789:app/GCM/my-android-app
+    amazon:
+      arn: arn:aws:sns:eu-west-1:123456789:app/ADM/my-amazon-app
+
+
+---
+# Added by Micronaut AWS SDK SQS
+aws:
+  sqs:
+    region: eu-west-1
+    queue: MyQueue
+    queueNamePrefix: vlad_
+    autoCreateQueue: true
+    cache: false
+    fifo: true
+    delaySeconds: 0
+    messageRetentionPeriod: 345600
+    maximumMessageSize: 262144
+    visibilityTimeout: 30
+
+
+---
+# Added by Micronaut Data JDBC
+datasources:
+  default:
+    url: jdbc:h2:mem:devDb;MVCC=TRUE;LOCK_TIMEOUT=10000;DB_CLOSE_ON_EXIT=FALSE
+    driverClassName: org.h2.Driver
+    username: sa
+    password: ''
+    schema-generate: CREATE_DROP
+    dialect: H2
+
+
+---
+# Added by GORM for Hibernate
+dataSource:
+  pooled: true
+  dbCreate: create-drop
+  url: jdbc:h2:mem:devDb
+  driverClassName: org.h2.Driver
+  username: sa
+  password: null
+hibernate:
+  cache:
+    queries: false
+    use_second_level_cache: true
+    use_query_cache: false
+    region.factory_class: org.hibernate.cache.ehcache.EhCacheRegionFactory
+
+
+---
+# Added by Facebook SDK for Micronaut
+faceboook:
+  sdk:
+    app:
+      id: 1234567890
+      secret: t0ps€cr€tHaSh
+      permissions:
+      - email
+      - user_photos
+      version: v5.0
+
+
+---
+# Added by Micronaut Snitch
+snitches:
+  id: mydmsid
+
